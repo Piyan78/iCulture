@@ -1,0 +1,133 @@
+:root {
+  --padding: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  min-height: 2000px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding: 0 5rem;
+}
+
+/* landing Page */
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-page h1 {
+  font-size: 4rem;
+}
+
+.landing-page p {
+  width: 45%;
+  text-align: justify;
+  padding: 1rem 0;
+}
+
+.landing-page a {
+  text-decoration: none;
+}
+
+/* halaman ke dua */
+.halamandua {
+  background-color: #1d2020;
+  color: #fff;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.halamandua h1 {
+  padding-bottom: 1rem;
+}
+
+.halamandua p {
+  text-align: justify;
+}
+
+.card-keberagaman {
+  margin: 6rem 0;
+  padding: 0 5rem;
+}
+
+.card-keberagaman .container {
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-keberagaman .container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  scroll-snap-align: start;
+  min-width: 100%;
+  min-height: 30rem;
+  border-radius: 1rem;
+  background-image: url('../img/bali');
+  background-size: cover;
+  background-position: 0 -10rem;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card p {
+  color: grey;
+  line-height: 2rem;
+  margin-right: 2rem;
+  position: relative;
+  z-index: 1;
+}
